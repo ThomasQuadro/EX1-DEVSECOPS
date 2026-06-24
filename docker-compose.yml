@@ -1,0 +1,13 @@
+services:
+  gitleaks:
+    build: .
+    image: devsecops-ex1-gitleaks
+    volumes:
+      - ./target:/repo:ro
+      - ./reports:/reports
+    command:
+      - detect
+      - --source=/repo
+      - --report-format=json
+      - --report-path=/reports/gitleaks-report.json
+      - -v
