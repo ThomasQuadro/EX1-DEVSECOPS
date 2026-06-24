@@ -1,11 +1,5 @@
 # Compte rendu Exercice 1 : détection de secrets avec Gitleaks
 
-## Objectif de l'exercice
-
-L'objectif de cet exercice était d'utiliser Gitleaks pour analyser un dépôt Git et vérifier s'il contenait des secrets exposés. Dans un contexte DevSecOps, ce type de contrôle est important car un secret poussé dans Git doit être considéré comme compromis, même s'il est supprimé ensuite du fichier concerné. L'historique Git conserve les anciennes versions, ce qui rend l'analyse complète indispensable.
-
-Le dépôt utilisé pour l'exercice est `OWASP/wrongsecrets`, un projet volontairement vulnérable destiné à l'entraînement.
-
 ## Méthode utilisée
 
 J'ai d'abord cloné le dépôt en conservant tout son historique Git. C'est un point important, car une analyse limitée au dernier état du code ne permettrait pas de retrouver les secrets présents dans d'anciens commits.
